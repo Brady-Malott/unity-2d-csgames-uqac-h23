@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public Transform target;
     public float speed = 2f;
-    private float minDistance = 1f;
+    private float maxDistance = 3f;
     private float range;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     {
         range = Vector2.Distance(transform.position, target.position);
         
-        if (range > minDistance)
+        if (range < maxDistance)
         {
             Debug.Log(range);
 
