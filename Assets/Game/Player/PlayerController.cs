@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         // Setup Rigidbody for frictionless top down movement and dynamic collision
         rigidbody2D = GetComponent<Rigidbody2D>();
-
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigidbody2D.isKinematic = false;
         rigidbody2D.angularDrag = 0.0f;
         rigidbody2D.gravityScale = 0.0f;
